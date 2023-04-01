@@ -1,12 +1,14 @@
 # Date - 10/02/2023
 # decorators - декораторы
-# Decorators - @classmethod and #staticmethod
+# Decorators - #classmethod and #staticmethod
+# classmethod - на уровне класса
+# staticmethod - не имеет доступа ни атрибутам классам и не атрибутам экземпляра класса
 
 class Vector:
     MIN_COORD = 0
     MAX_COORD = 100
 
-    @classmethod
+    @classmethod  # если хотим работать с атрибутами класса
     def validate(cls, arg):
         return cls.MIN_COORD <= arg <= cls.MAX_COORD
 
@@ -21,9 +23,9 @@ class Vector:
     def get_coords(self):
         return self.x, self.y
 
-    @staticmethod
+    @staticmethod  # если хотим работать только соответствующими параметрами
     def norm2(x, y):
-        return x * x + y * y
+        return x * x + y * y  # мы еще можем добавить как + Vector.MAX_COORD - оно работает, но если изменится имя класса то код не работает, self нету
 
 
 v = Vector(1, 20)

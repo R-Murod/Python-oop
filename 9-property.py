@@ -6,8 +6,8 @@
 
 class Person:
     def __init__(self, name, old):
-        self.__name = name # as private
-        self.__old = old # что бы обращаться к таким закрытым данных, нужна геттеры и сеттеры
+        self.__name = name  # as private
+        self.__old = old  # что бы обращаться к таким закрытым данных, нужна геттеры и сеттеры
 
     # def get_old(self):
     #     return self.__old
@@ -15,15 +15,15 @@ class Person:
     # def set_old(self, old):
     #     self.__old = old
 
-    @property # ставится перед геттером
+    @property  # ставится перед геттером
     def old(self):
         return self.__old
 
     @old.setter
-    def old(self, old): # the name of methods must match, when we use decorators
+    def old(self, old):  # the name of methods must match, when we use decorators
         self.__old = old
 
-    @old.deleter # оно вызывается когда происходить удаление определенного свойства
+    @old.deleter  # оно вызывается когда происходить удаление определенного свойства
     def old(self):
         del self.__old
 
@@ -44,7 +44,6 @@ p = Person("Murod", 21)
 
 del p.old
 # print(p.old) # не будет работать потому что, оно удалено
-p.old = 5 # но мы можем присвоить новое значение
+p.old = 5  # но мы можем присвоить новое значение
 print(p.old)
-print(p.__dict__) # можем посмотреть что там
-
+print(p.__dict__)  # можем посмотреть что там

@@ -1,12 +1,11 @@
 # Date - 10/02/2023
 # Magic method - магический метод
-# __new__()  - вызывается перед созданием объекта класса
+# __new__() - вызывается перед созданием объекта класса
 # super() - конструкция, ссылка на базовый класс
 
 
 # class Point:
-#     def __new__(cls, *args,
-#                 **kwargs):  # magic method __new__ , cls - ссылается на текущий экземпляр класса, в данном сл. Point
+#     def __new__(cls, *args, **kwargs):  # magic method __new__ , cls - ссылается на текущий экземпляр класса, в данном сл. Point
 #         print("call __new__ for " + str(cls))
 #         return super().__new__(cls)
 #
@@ -52,4 +51,5 @@ class DataBase:
 db = DataBase('root', '1234', 80)
 db2 = DataBase('root2', '5678', 40)
 
-print(id(db), id(db2)) # это говорить что при создании 2 го объекта он не был создан
+print(id(db), id(db2))  # это говорить что при создании 2-го объекта он не был создан
+print(db.__dict__)  # Выведет нам db2, потому что у нас исп. __init__

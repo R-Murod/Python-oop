@@ -43,7 +43,7 @@ class Point3D:
     z = Integer()
     xr = ReadIntX()
 
-    def __init__(self, x, y, z):  # инициализатор с 3 я параметрами
+    def __init__(self, x, y, z):  # инициализатор с 3я параметрами
         # self._x = x # protected
         # self._y = y
         # self._z = z
@@ -51,7 +51,7 @@ class Point3D:
         # мы можем просто исп.
 
         self.x = x  # protected
-        self.y = y  # можно воспользоваться сущ. объектом
+        self.y = y  # можна воспользоваться сущ. объектом
         self.z = z
 
     # закомментирую что бы использовать дескрипторе

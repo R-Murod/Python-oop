@@ -1,4 +1,5 @@
 # Модификатор доступа
+# Инкапсуляция
 # public
 # protected - _attribute
 # private - __attribute

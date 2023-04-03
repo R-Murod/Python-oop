@@ -1,5 +1,5 @@
 # nested classes - вложенные классы
-# Это нужна нам для описания модели во фреймворке - Django
+# Это нужна нам для описания модели в фреймворке - Django
 
 class Women:
     title = 'объект класса для поля title'
@@ -15,7 +15,7 @@ class Women:
         ordering = ['id']
 
         def __init__(self, access):
-            self._access = access
+            self._access = access  # берет значение из self.meta
 
 
 w = Women('root', '12345')
